@@ -1,0 +1,28 @@
+{
+    "name": "jorpo/object-access",
+    "description": "Object access and immutability thought experiment",
+    "type": "library",
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jorpo\\ObjectAccess\\": [
+                "tests"
+            ]
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jorpo\\ObjectAccess\\": [
+                "src"
+            ]
+        }
+    },
+    "require": {
+        "php": "^7.4"
+    }
+}
