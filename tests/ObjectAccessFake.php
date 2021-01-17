@@ -4,7 +4,7 @@ namespace Jorpo\ObjectAccess;
 
 class ObjectAccessFake
 {
-    use ObjectAccessTrait;
+    use ObjectAccess;
 
     private string $mushroom;
     private string $badger;

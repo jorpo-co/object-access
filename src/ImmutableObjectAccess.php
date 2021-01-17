@@ -2,9 +2,9 @@
 
 namespace Jorpo\ObjectAccess;
 
-trait ImmutableObjectAccessTrait
+trait ImmutableObjectAccess
 {
-    use ObjectAccessTrait {
+    use ObjectAccess {
         __set as private nset;
         __unset as private nunset;
     }

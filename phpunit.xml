@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.0/phpunit.xsd"
-    colors="true"
-    executionOrder="depends,defects"
-    forceCoversAnnotation="false"
-    beStrictAboutCoversAnnotation="true"
-    beStrictAboutOutputDuringTests="true"
-    beStrictAboutTodoAnnotatedTests="false"
-    verbose="true">
+<phpunit
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+  cacheResult="false"
+  colors="true"
+  executionOrder="depends,defects"
+  forceCoversAnnotation="false"
+  beStrictAboutCoversAnnotation="true"
+  beStrictAboutOutputDuringTests="true"
+  beStrictAboutTodoAnnotatedTests="false"
+  verbose="true">
 
-    <testsuites>
-        <testsuite name="unit">
-            <directory suffix="Test.php">tests</directory>
-        </testsuite>
-    </testsuites>
+  <coverage processUncoveredFiles="false">
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+    <report>
+      <html outputDirectory="reference/coverage"/>
+    </report>
+  </coverage>
 
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="false">
-            <directory suffix=".php">src</directory>
-        </whitelist>
-    </filter>
-
-    <logging>
-        <log type="coverage-html" target="reference/coverage"/>
-    </logging>
+  <testsuites>
+    <testsuite name="unit">
+      <directory suffix="Test.php">tests</directory>
+    </testsuite>
+  </testsuites>
+  
+  <logging/>
 </phpunit>

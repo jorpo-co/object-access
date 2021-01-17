@@ -2,9 +2,7 @@
 
 namespace Jorpo\ObjectAccess;
 
-use Throwable;
-
-trait ObjectAccessTrait
+trait ObjectAccess
 {
     /**
      * @param mixed $value
@@ -26,11 +24,7 @@ trait ObjectAccessTrait
      */
     public function __get(string $property)
     {
-        try {
-            return @$this->{$property} ?? null;
-        } catch (Throwable $e) {
-            return null;
-        }
+        return !empty($this->{$property}) ? $this->{$property} : null;
     }
 
     public function __unset(string $property): void

@@ -4,7 +4,7 @@ namespace Jorpo\ObjectAccess;
 
 class ImmutableObjectAccessFake
 {
-    use ImmutableObjectAccessTrait;
+    use ImmutableObjectAccess;
 
     private string $mushroom;
     private string $badger;
