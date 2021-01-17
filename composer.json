@@ -12,15 +12,8 @@
     "config": {
         "bin-dir": "bin"
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Jorpo\\ObjectAccess\\": [
-                "tests"
-            ]
-        }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.0"
+    "require": {
+        "php": "^7.4 || ^8.0"
     },
     "autoload": {
         "psr-4": {
@@ -29,7 +22,14 @@
             ]
         }
     },
-    "require": {
-        "php": "^7.4 || ^8.0"
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jorpo\\ObjectAccess\\": [
+                "tests"
+            ]
+        }
     }
 }
