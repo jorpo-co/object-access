@@ -9,12 +9,12 @@ trait ImmutableObjectAccess
         __unset as private nunset;
     }
 
-    public function __set($property, $value)
+    public function __set($property, $value): void
     {
         return;
     }
 
-    public function __unset($property)
+    public function __unset($property): void
     {
         return;
     }

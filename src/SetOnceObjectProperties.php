@@ -8,7 +8,7 @@ trait SetOnceObjectProperties
         __set as private nset;
     }
 
-    public function __set(string $property, $value): void
+    public function __set(string $property, mixed $value): void
     {
         if (property_exists($this, $property) && empty($this->{$property})) {
             $this->{$property} = $value;

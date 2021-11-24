@@ -4,10 +4,7 @@ namespace Jorpo\ObjectAccess;
 
 trait ObjectAccess
 {
-    /**
-     * @param mixed $value
-     */
-    public function __set(string $property, $value): void
+    public function __set(string $property, mixed $value): void
     {
         if (property_exists($this, $property)) {
             $this->{$property} = $value;
@@ -19,10 +16,7 @@ trait ObjectAccess
         return isset($this->{$property});
     }
 
-    /**
-     * @return mixed
-     */
-    public function __get(string $property)
+    public function __get(string $property): mixed
     {
         return !empty($this->{$property}) ? $this->{$property} : null;
     }

@@ -2,7 +2,7 @@
 
 namespace Jorpo\ObjectAccess;
 
-trait CallableObjectProperties
+trait SetOnceCallableObjectProperties
 {
     public function __call(string $property, mixed $value = null): mixed
     {
@@ -10,7 +10,7 @@ trait CallableObjectProperties
             return;
         }
 
-        if (property_exists($this, $property)) {
+        if (property_exists($this, $property) && empty($this->{$property})) {
             $this->{$property} = $value;
         }
 
